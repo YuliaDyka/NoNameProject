@@ -1,0 +1,15 @@
+.input_box{
+display: flex;
+    flex-direction: column;
+    padding: 50px 50px 80px 50px;
+    height: 70px;
+    justify-content: space-between;
+    input{
+        border-radius: 8px;
+        border: 2px solid;
+        padding: 10px;
+        margin: 10px;
+        width: 370px;   
+    }
+}
+
