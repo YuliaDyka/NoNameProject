@@ -1,0 +1,88 @@
+/* HEADER */
+.navbar {
+  position: sticky;       /* завжди зверху */
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+  height: 56px;
+
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* CONTENT */
+.navbar__container {
+  max-width: 1100px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LEFT */
+.navbar__left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.navbar__logo {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* NAV */
+.navbar__nav {
+  display: flex;
+  gap: 8px;
+}
+
+.navbar__link {
+  padding: 6px 12px;
+  border-radius: 6px;
+
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+
+  color: #374151;
+}
+
+.navbar__link:hover {
+  background-color: #f3f4f6;
+}
+
+/* Active NavLink */
+.navbar__link.active {
+  background-color: #2563eb;
+  color: white;
+}
+
+/* RIGHT */
+.navbar__right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* BUTTON */
+.navbar__button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  background-color: #111827;
+  color: white;
+  cursor: pointer;
+}
+
+.navbar__button:hover {
+  background-color: #1f2937;
+}
