@@ -30,14 +30,15 @@ function SignupPage() {
   }
 
   return (
-    <div className="e">
+    <div className="container_signup">
       <h1>This is the sign up page</h1>
 
       <form onSubmit={handleSubmit}>
-        <div className="input_boxs">
-          <input placeholder="name" value={name} onChange={(e) => setName(e.target.value)} />
-          <input placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        <div className="input_box">
+          <input name="name" placeholder="name" value={name} onChange={(e) => setName(e.target.value)} />
+          <input name="email" placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)} />
           <input
+            name="password"
             placeholder="password"
             type="password"
             value={password}

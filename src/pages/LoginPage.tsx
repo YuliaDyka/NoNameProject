@@ -27,18 +27,20 @@ function LoginPage() {
   }
 
   return (
-    <div>
+    <div className="container_login">
       <h1>This is the log in page</h1>
 
       <form onSubmit={handleSubmit}>
         <div className="input_box">
           <input
+            name="email"
             placeholder="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             autoComplete="email"
           />
-          <input
+          <input 
+            name="password"
             placeholder="password"
             type="password"
             value={password}

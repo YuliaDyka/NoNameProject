@@ -1,11 +1,11 @@
 import { apiFetch } from "./api";
 
 export type LoginRequest = { email: string; password: string };
-export type SignupRequest = { name: string; email: string; password: string };
+export type SignupRequest = { username: string; email: string; password: string };
 
 export type MeResponse = {
   id: number | string;
-  name: string;
+  username: string;
   email: string;
 };
 

@@ -44,8 +44,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     await refreshMe(); // ✅ підтягнути user
   }
 
-  async function signup(name: string, email: string, password: string) {
-    await authApi.signup({ name, email, password });
+  async function signup(username: string, email: string, password: string) {
+    await authApi.signup({ username, email, password });
     // тут не логінимо автоматом, вирішимо в SignupPage
   }
 

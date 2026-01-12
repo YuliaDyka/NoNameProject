@@ -16,7 +16,7 @@ export default function Navbar() {
       <div className="navbar__container">
         {/* LEFT */}
         <div className="navbar__left">
-          <span className="navbar__logo">MyApp</span>
+          <span className="navbar__logo">NoName</span>
 
           <nav className="navbar__nav">
             <NavLink to="/movies" className="navbar__link">
