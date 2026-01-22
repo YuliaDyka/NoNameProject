@@ -194,13 +194,14 @@ export default function Profile() {
 
 const buttonStyle: React.CSSProperties = {
   display: 'block',
-  width: 140,
+  width: 110,
   padding: '8px 12px',
   marginBottom: 8,
   borderRadius: 8,
   border: '1px solid #ddd',
   background: '#fff',
   cursor: 'pointer',
+  fontSize: '12px'
 };
 function InfoRow({ label, value }: { label: string; value: string }) {
   return (

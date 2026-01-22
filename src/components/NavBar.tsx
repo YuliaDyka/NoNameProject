@@ -19,8 +19,8 @@ export default function Navbar() {
           <span className="navbar__logo">NoName</span>
 
           <nav className="navbar__nav">
-            <NavLink to="/movies" className="navbar__link">
-              Фільми
+            <NavLink to="/" className="navbar__link">
+              Головна
             </NavLink>
             <NavLink to="/profile" className="navbar__link">
               Кабінет
