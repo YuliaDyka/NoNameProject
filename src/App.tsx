@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/HomePage";
 import Login from "./pages/LoginPage";
 import Signup from "./pages/SignupPage";
-import Movies from "./pages/MoviesPage";
+import {MoviesPage} from "./pages/MoviesPage";
 import Profile from "./pages/ProfilePage";
 
 import { AuthProvider } from "./auth/AuthContext";
@@ -23,7 +23,7 @@ function App() {
 
           {/* Все інше — з Navbar через Layout */}
           <Route element={<Layout />}>
-            <Route path="/movies" element={<Movies />} />
+            <Route path="/movies" element={<MoviesPage />} />
 
             {/* Protected група */}
             <Route element={<ProtectedRoute />}>
