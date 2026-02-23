@@ -32,3 +32,9 @@ export async function me() {
 export async function logout() {
   return apiFetch<unknown>("/auth/logout", { method: "POST" });
 }
+
+export async function refresh() {
+  return apiFetch("/auth/refresh", {
+    method: "POST",
+  });
+}

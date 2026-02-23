@@ -1,4 +1,10 @@
-import React, { createContext, useContext, useEffect, useMemo, useState } from "react";
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 import * as authApi from "../services/auth.service";
 
 type User = authApi.MeResponse;
@@ -25,8 +31,15 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     try {
       const me = await authApi.me();
       setUser(me);
-    } catch {
-      setUser(null);
+    } catch (err: any) {
+      try {
+        // якщо access token протух — пробуємо refresh
+        await authApi.refresh();
+        const me = await authApi.me();
+        setUser(me);
+      } catch {
+        setUser(null);
+      }
     }
   }
 
@@ -58,8 +71,16 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }
 
   const value = useMemo(
-    () => ({ user, isAuthenticated, loading, login, signup, logout, refreshMe }),
-    [user, isAuthenticated, loading]
+    () => ({
+      user,
+      isAuthenticated,
+      loading,
+      login,
+      signup,
+      logout,
+      refreshMe,
+    }),
+    [user, isAuthenticated, loading],
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

@@ -8,6 +8,7 @@ export interface Movie {
   rating?: number;
   watchedAt?: string;
   createdAt: string;
+  posterUrl?: string | null;
 }
 
 export interface CreateMovieDto {
